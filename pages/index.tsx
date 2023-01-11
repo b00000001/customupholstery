@@ -42,11 +42,11 @@ export default function Home() {
               <div className="pl-12 font-bold">Logo</div>
               <div className="w-2/5">
                 <ul className="flex justify-evenly w-11/12 text-xl font-bold">
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400'>Home</li>
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400'>About Us</li>
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400'>Service</li>
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400'>Photo Gallery</li>
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400'>Contact</li>
+                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>Home</li>
+                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>About Us</li>
+                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>Service</li>
+                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>Photo Gallery</li>
+                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>Contact</li>
                 </ul>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function Home() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  Get started
+                  <a href="#get-started">Get Started</a>
                 </button>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="border border-gray-400">
+      <section id='get-started' className="border border-gray-400">
         <div>Other upholstery info</div>
       </section>
     </div>
