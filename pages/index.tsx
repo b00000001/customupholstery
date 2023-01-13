@@ -10,11 +10,13 @@ export default function Home() {
   const myRef = useRef(null);
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    if (window.scrollY === 0){
-      myRef.current.className = 'transition-all ease-in-out duration-[1000ms] h-1/5 text-white text-5xl flex items-center justify-between w-auto'
+    if (window.scrollY === 0) {
+      myRef.current.className =
+        'transition-all ease-in-out duration-[1000ms] h-1/5 text-white text-5xl flex items-center justify-between w-auto';
     } else {
       console.log('scrolled menu', myRef.current.className);
-      myRef.current.className = 'transition-all ease-in-out duration-[1000ms] fixed top-0 h-16 bg-zinc-900 text-white text-3xl flex items-center justify-between w-full'
+      myRef.current.className =
+        'transition-all ease-in-out duration-[1000ms] fixed top-0 h-16 bg-zinc-900 text-white text-3xl flex items-center justify-between w-full';
     }
   });
   const [clientWindowHeight, setClientWindowHeight] = useState('');
@@ -29,8 +31,7 @@ export default function Home() {
           className="relative overflow-hidden bg-no-repeat bg-cover"
           style={{
             backgroundPosition: '50%;',
-            backgroundImage:
-              "url('https://irp-cdn.multiscreensite.com/58c9c8d5/wid-1.jpg');",
+            backgroundImage: "url('https://i.imgur.com/m8vqble.jpg');",
             height: '800px;',
           }}
         >
@@ -38,15 +39,28 @@ export default function Home() {
             className="absolute top-0 right-0 bottom-0 left-0 w-full overflow-hidden bg-fixed"
             style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}
           >
-            <div ref={myRef} className="h-1/5 text-white text-3xl flex items-center justify-between w-auto">
+            <div
+              ref={myRef}
+              className="h-1/5 text-white text-3xl flex items-center justify-between w-auto"
+            >
               <div className="pl-12 font-bold">Logo</div>
               <div className="w-2/5">
                 <ul className="flex justify-evenly w-11/12 text-xl font-bold">
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>Home</li>
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>About Us</li>
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>Service</li>
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>Photo Gallery</li>
-                  <li className='transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer'>Contact</li>
+                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
+                    Home
+                  </li>
+                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
+                    About Us
+                  </li>
+                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
+                    Service
+                  </li>
+                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
+                    Photo Gallery
+                  </li>
+                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
+                    Contact
+                  </li>
                 </ul>
               </div>
             </div>
@@ -79,8 +93,57 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id='get-started' className="border border-gray-400">
-        <div>Other upholstery info</div>
+      <section id="get-started" className="flex justify-center">
+        <div className="w-3/5 h-4/5">
+          <div className="flex justify-between">
+            <div className="flex flex-col items-center px-8">
+              <h3 className="text-2xl font-bold py-4">Vehicle Upholstery</h3>
+              <span className="">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+                nemo natus assumenda maxime in. Quis perferendis quo doloremque
+                quasi nam?
+              </span>
+              <div className="flex justify-end w-full border-green-300">
+                <a href="" className="py-4 font-bold text-md">
+                  Learn More
+                </a>
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex flex-col items-center">
+                <h3 className="text-2xl font-bold py-4">Furniture Upholstery</h3>
+                <span className="">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+                  nemo natus assumenda maxime in. Quis perferendis quo
+                  doloremque quasi nam?
+                </span>
+                <div className="flex justify-end w-full">
+                  <a href="" className="py-4 font-bold text-md">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+              <div className="flex justify-between px-8">
+                <div className="flex flex-col items-center">
+                  <h3 className="text-2xl font-bold py-4">
+                    Boat Upholstery
+                  </h3>
+                  <span className="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste nemo natus assumenda maxime in. Quis perferendis quo
+                    doloremque quasi nam?
+                  </span>
+                  <div className="flex justify-end w-full">
+                    <a href="" className="py-4 font-bold text-md">
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              <div className='py-12'>Photos section</div>
+        </div>
       </section>
     </div>
   );
