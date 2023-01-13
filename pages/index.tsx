@@ -1,6 +1,7 @@
 import {useEffect, useState, useRef} from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
+import GetStarted from '../components/GetStarted';
+import Carousel from '../components/Carousel';
+import NavBar from '../components/NavBar';
 // import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css';
 
@@ -25,7 +26,7 @@ export default function Home() {
     setClientWindowHeight(window.scrollY);
   };
   return (
-    <div className="scroll-smooth h-100">
+    <div className="scroll-smooth h-100 bg-white">
       <section className="mb-40 h-full">
         <div
           className="relative overflow-hidden bg-no-repeat bg-cover"
@@ -39,31 +40,7 @@ export default function Home() {
             className="absolute top-0 right-0 bottom-0 left-0 w-full overflow-hidden bg-fixed"
             style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}
           >
-            <div
-              ref={myRef}
-              className="h-1/5 text-white text-3xl flex items-center justify-between w-auto"
-            >
-              <div className="pl-12 font-bold">Logo</div>
-              <div className="w-2/5">
-                <ul className="flex justify-evenly w-11/12 text-xl font-bold">
-                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
-                    Home
-                  </li>
-                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
-                    About Us
-                  </li>
-                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
-                    Service
-                  </li>
-                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
-                    Photo Gallery
-                  </li>
-                  <li className="transition-all ease-in-out duration-[200ms] hover:text-slate-400 cursor-pointer">
-                    Contact
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <NavBar myRef={myRef}/>
             <div className="flex justify-center items-center">
               <div className="text-center text-white px-6 md:px-12">
                 <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
@@ -82,69 +59,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-items-start text-black text-3xl h-40">
-          <div className="flex flex-col mt-2 ml-6 border bg-gray-300 px-16">
-            <p className="flex items-center justify-center w-auto ml-12 font-bold">
+        <div className="flex justify-items-start text-black h-40">
+          <div className="flex flex-col mt-2 ml-6 bg-gray-300 px-16">
+            <p className="w-full flex justify-start items-center font-bold text-lg">
               What we do
             </p>
-            <p className="mt-4 font-bold">
+            <p className="mt-4 font-bold text-3xl">
               Full service upholstery in B.C. Canada
             </p>
           </div>
         </div>
       </section>
-      <section id="get-started" className="flex justify-center">
-        <div className="w-3/5 h-4/5">
-          <div className="flex justify-between">
-            <div className="flex flex-col items-center px-8">
-              <h3 className="text-2xl font-bold py-4">Vehicle Upholstery</h3>
-              <span className="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-                nemo natus assumenda maxime in. Quis perferendis quo doloremque
-                quasi nam?
-              </span>
-              <div className="flex justify-end w-full border-green-300">
-                <a href="" className="py-4 font-bold text-md">
-                  Learn More
-                </a>
-              </div>
-            </div>
-            <div className="flex justify-between">
-              <div className="flex flex-col items-center">
-                <h3 className="text-2xl font-bold py-4">Furniture Upholstery</h3>
-                <span className="">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-                  nemo natus assumenda maxime in. Quis perferendis quo
-                  doloremque quasi nam?
-                </span>
-                <div className="flex justify-end w-full">
-                  <a href="" className="py-4 font-bold text-md">
-                    Learn More
-                  </a>
-                </div>
-              </div>
-              <div className="flex justify-between px-8">
-                <div className="flex flex-col items-center">
-                  <h3 className="text-2xl font-bold py-4">
-                    Boat Upholstery
-                  </h3>
-                  <span className="">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iste nemo natus assumenda maxime in. Quis perferendis quo
-                    doloremque quasi nam?
-                  </span>
-                  <div className="flex justify-end w-full">
-                    <a href="" className="py-4 font-bold text-md">
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-              <div className='py-12'>Photos section</div>
-        </div>
-      </section>
+      <GetStarted />
+      <Carousel />
     </div>
   );
 }
